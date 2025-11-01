@@ -1,20 +1,7 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://amoresligados-astro.vercel.app',
-  base: '/',
-  outDir: './dist',
-  publicDir: './public',
-  server: {
-    port: 4321,
-    host: true
-  },
-  integrations: [],
-  vite: {
-    optimizeDeps: {
-      include: ['astro']
-    }
-  }
+  // Dejarlo vacío es lo más seguro.
+  // Astro usará las opciones por defecto que funcionan perfectamente.
 });
