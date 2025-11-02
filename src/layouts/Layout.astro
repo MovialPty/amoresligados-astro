@@ -20,55 +20,23 @@ const { title, description = "Recupere al ser amado ya! Consultas espirituales y
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-		
-		<!-- Tailwind CSS -->
-		<script src="https://cdn.tailwindcss.com"></script>
-		
-		<script>
-			tailwind.config = {
-				theme: {
-					extend: {
-						colors: {
-							'mystic-blue': '#1e3a8a',
-							'deep-blue': '#0f172a',
-							'celestial': '#3b82f6',
-							'moon-glow': '#60a5fa',
-							'star-light': '#93c5fd',
-						},
-						fontFamily: {
-							'display': ['Playfair Display', 'serif'],
-							'elegant': ['Cinzel', 'serif'],
-							'sans': ['Inter', 'sans-serif'],
-						},
-						animation: {
-							'float': 'float 3s ease-in-out infinite',
-							'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-							'shimmer': 'shimmer 3s ease-in-out infinite',
-							'glow': 'glow 2s ease-in-out infinite',
-						},
-						keyframes: {
-							float: {
-								'0%, 100%': { transform: 'translateY(0px)' },
-								'50%': { transform: 'translateY(-20px)' },
-							},
-							shimmer: {
-								'0%, 100%': { opacity: '1' },
-								'50%': { opacity: '0.7' },
-							},
-							glow: {
-								'0%, 100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
-								'50%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.8)' },
-							},
-						},
-					},
-				},
-			}
-		</script>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
 		
 		<style>
+			/* Reset y Variables */
 			* {
-				-webkit-tap-highlight-color: transparent;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			:root {
+				--primary-gold: #f4a261;
+				--secondary-coral: #e76f51;
+				--purple-accent: #9d4edd;
+				--dark-purple: #5a189a;
+				--text-light: #e9ecef;
+				--text-white: #ffffff;
 			}
 			
 			html {
@@ -76,48 +44,192 @@ const { title, description = "Recupere al ser amado ya! Consultas espirituales y
 			}
 			
 			body {
-				font-family: 'Inter', sans-serif;
-				background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+				font-family: 'Raleway', sans-serif;
+				line-height: 1.8;
+				color: #333;
+				background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
 				background-attachment: fixed;
+				min-height: 100vh;
+				position: relative;
+				overflow-x: hidden;
 			}
 			
-			/* Animaciones personalizadas */
-			@keyframes slide-up {
-				from {
-					opacity: 0;
-					transform: translateY(30px);
-				}
-				to {
-					opacity: 1;
-					transform: translateY(0);
-				}
+			body::before {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: 
+					radial-gradient(circle at 20% 50%, rgba(157, 78, 221, 0.15) 0%, transparent 50%),
+					radial-gradient(circle at 80% 80%, rgba(244, 162, 97, 0.15) 0%, transparent 50%),
+					radial-gradient(circle at 40% 20%, rgba(90, 24, 154, 0.1) 0%, transparent 50%);
+				pointer-events: none;
+				z-index: 0;
+				animation: aurora 20s ease-in-out infinite;
 			}
 			
-			.animate-slide-up {
-				animation: slide-up 0.6s ease-out forwards;
+			@keyframes aurora {
+				0%, 100% { opacity: 1; }
+				50% { opacity: 0.8; }
 			}
 			
-			/* Efecto glassmorphism */
-			.glass {
-				background: rgba(30, 58, 138, 0.15);
-				backdrop-filter: blur(12px);
-				border: 1px solid rgba(59, 130, 246, 0.2);
+			/* Tipografía Moderna */
+			h1, h2, h3, h4, h5, h6 {
+				font-family: 'Playfair Display', serif;
+				font-weight: 700;
+				line-height: 1.3;
+				margin-bottom: 1.5rem;
+				text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.5);
+				letter-spacing: 0.5px;
 			}
 			
-			.glass-dark {
-				background: rgba(15, 23, 42, 0.7);
-				backdrop-filter: blur(16px);
-				border: 1px solid rgba(59, 130, 246, 0.15);
-			}
-			
-			/* Gradiente de texto animado */
-			.gradient-text {
-				background: linear-gradient(135deg, #60a5fa, #3b82f6, #2563eb, #60a5fa);
-				background-size: 200% 200%;
+			h1 { 
+				font-size: 4rem; 
+				background: linear-gradient(135deg, var(--primary-gold), var(--purple-accent), var(--secondary-coral));
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				background-clip: text;
+				animation: shimmer 4s ease-in-out infinite;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+			
+			h2 { 
+				font-size: 2.8rem; 
+				color: var(--secondary-coral);
+				position: relative;
+				display: inline-block;
+				padding-bottom: 15px;
+			}
+			
+			h2::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 80%;
+				height: 4px;
+				background: linear-gradient(90deg, transparent, var(--secondary-coral), var(--primary-gold), transparent);
+				border-radius: 2px;
+			}
+			
+			h3 { font-size: 2.2rem; color: var(--primary-gold); }
+			h4 { font-size: 1.8rem; color: var(--secondary-coral); }
+			h5 { font-size: 1.5rem; color: var(--primary-gold); }
+			h6 { font-size: 1.2rem; color: var(--secondary-coral); }
+			
+			p {
+				margin-bottom: 1.5rem;
+				color: var(--text-light);
+				font-size: 1.15rem;
+				line-height: 2;
+				font-weight: 300;
+			}
+			
+			@keyframes shimmer {
+				0%, 100% { filter: brightness(1) hue-rotate(0deg); }
+				50% { filter: brightness(1.3) hue-rotate(10deg); }
+			}
+			
+			/* Layout Principal */
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+				position: relative;
+				z-index: 1;
+			}
+			
+			/* Header Ultra Moderno */
+			.header {
+				background: linear-gradient(180deg, rgba(15, 12, 41, 0.98), rgba(15, 12, 41, 0.95));
+				border-bottom: 3px solid transparent;
+				border-image: linear-gradient(90deg, transparent, var(--primary-gold), var(--purple-accent), var(--primary-gold), transparent) 1;
+				padding: 1.5rem 0;
+				position: sticky;
+				top: 0;
+				z-index: 100;
+				backdrop-filter: blur(25px) saturate(180%);
+				box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+			}
+			
+			.nav {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.nav a {
+				color: var(--primary-gold);
+				text-decoration: none;
+				font-weight: 700;
+				font-size: 1.3rem;
+				padding: 1rem 2.5rem;
+				border-radius: 50px;
+				background: linear-gradient(135deg, rgba(244, 162, 97, 0.15), rgba(157, 78, 221, 0.15));
+				border: 2px solid var(--primary-gold);
+				transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				position: relative;
+				overflow: hidden;
+				font-family: 'Cinzel', serif;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			
+			.nav a::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 0;
+				height: 0;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(244, 162, 97, 0.4), transparent);
+				transform: translate(-50%, -50%);
+				transition: width 0.6s, height 0.6s;
+			}
+			
+			.nav a:hover::before {
+				width: 400px;
+				height: 400px;
+			}
+			
+			.nav a:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 15px 40px rgba(244, 162, 97, 0.5);
+				background: linear-gradient(135deg, rgba(244, 162, 97, 0.25), rgba(157, 78, 221, 0.25));
+				border-color: var(--purple-accent);
+			}
+			
+			/* Botones de Llamada Premium */
+			.call-button {
+				display: inline-block;
+				background: linear-gradient(135deg, var(--secondary-coral) 0%, var(--primary-gold) 50%, var(--purple-accent) 100%);
+				background-size: 200% 200%;
+				color: var(--text-white);
+				text-decoration: none;
+				padding: 1.5rem 3.5rem;
+				border-radius: 60px;
+				font-weight: 700;
+				font-size: 1.3rem;
+				text-align: center;
+				transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				box-shadow: 
+					0 10px 40px rgba(231, 111, 81, 0.6), 
+					0 0 0 0 rgba(244, 162, 97, 0.7),
+					inset 0 0 20px rgba(255, 255, 255, 0.1);
+				margin: 2rem 0.5rem;
+				position: relative;
+				overflow: hidden;
+				text-transform: uppercase;
+				letter-spacing: 2px;
 				animation: gradient-shift 4s ease infinite;
+				border: none;
+				cursor: pointer;
+				font-family: 'Cinzel', serif;
 			}
 			
 			@keyframes gradient-shift {
@@ -125,120 +237,332 @@ const { title, description = "Recupere al ser amado ya! Consultas espirituales y
 				50% { background-position: 100% 50%; }
 			}
 			
-			/* Efecto de brillo en hover */
-			.shine-effect {
-				position: relative;
-				overflow: hidden;
+			.call-button::before {
+				content: '✨';
+				position: absolute;
+				left: 25px;
+				top: 50%;
+				transform: translateY(-50%);
+				opacity: 0;
+				transition: all 0.4s ease;
+				font-size: 1.5rem;
 			}
 			
-			.shine-effect::before {
+			.call-button::after {
 				content: '';
 				position: absolute;
 				top: 0;
 				left: -100%;
 				width: 100%;
 				height: 100%;
-				background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+				background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 				transition: left 0.7s;
 			}
 			
-			.shine-effect:hover::before {
+			.call-button:hover::after {
 				left: 100%;
+			}
+			
+			.call-button:hover::before {
+				opacity: 1;
+				left: 20px;
+			}
+			
+			.call-button:hover {
+				transform: translateY(-8px) scale(1.05);
+				box-shadow: 
+					0 20px 60px rgba(231, 111, 81, 0.7), 
+					0 0 0 15px rgba(244, 162, 97, 0.2),
+					inset 0 0 30px rgba(255, 255, 255, 0.2);
+				animation: gradient-shift 2s ease infinite, pulse-glow 2s infinite;
+			}
+			
+			@keyframes pulse-glow {
+				0%, 100% { box-shadow: 0 20px 60px rgba(231, 111, 81, 0.7), 0 0 0 0 rgba(244, 162, 97, 0.7); }
+				50% { box-shadow: 0 20px 60px rgba(231, 111, 81, 0.7), 0 0 0 20px rgba(244, 162, 97, 0); }
+			}
+			
+			/* Botón Flotante Mejorado */
+			.floating-call {
+				position: fixed;
+				bottom: 35px;
+				right: 35px;
+				background: linear-gradient(135deg, var(--secondary-coral), var(--primary-gold));
+				color: var(--text-white);
+				text-decoration: none;
+				padding: 1rem;
+				border-radius: 50%;
+				width: 80px;
+				height: 80px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 2.2rem;
+				box-shadow: 
+					0 15px 50px rgba(231, 111, 81, 0.7), 
+					0 0 0 0 rgba(244, 162, 97, 0.7),
+					inset 0 0 20px rgba(255, 255, 255, 0.2);
+				z-index: 1000;
+				transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				animation: float 3s ease-in-out infinite, pulse-ring 2.5s infinite;
+				border: 3px solid rgba(255, 255, 255, 0.3);
+			}
+			
+			@keyframes float {
+				0%, 100% { transform: translateY(0) rotate(0deg); }
+				50% { transform: translateY(-15px) rotate(5deg); }
+			}
+			
+			@keyframes pulse-ring {
+				0% { box-shadow: 0 15px 50px rgba(231, 111, 81, 0.7), 0 0 0 0 rgba(244, 162, 97, 0.8); }
+				50% { box-shadow: 0 15px 50px rgba(231, 111, 81, 0.7), 0 0 0 25px rgba(244, 162, 97, 0); }
+				100% { box-shadow: 0 15px 50px rgba(231, 111, 81, 0.7), 0 0 0 0 rgba(244, 162, 97, 0); }
+			}
+			
+			.floating-call:hover {
+				transform: scale(1.25) rotate(20deg);
+				box-shadow: 0 20px 70px rgba(231, 111, 81, 0.9);
+			}
+			
+			/* Secciones con Efectos */
+			.section {
+				padding: 6rem 0;
+				text-align: center;
+				position: relative;
+			}
+			
+			.section-dark {
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+				backdrop-filter: blur(15px) saturate(150%);
+				border-top: 2px solid rgba(244, 162, 97, 0.15);
+				border-bottom: 2px solid rgba(244, 162, 97, 0.15);
+				box-shadow: 
+					inset 0 0 120px rgba(157, 78, 221, 0.08),
+					0 10px 50px rgba(0, 0, 0, 0.4);
+			}
+			
+			/* Imágenes con Efectos Avanzados */
+			.feature-image {
+				width: 100%;
+				max-width: 600px;
+				height: auto;
+				border-radius: 25px;
+				margin: 3rem auto;
+				display: block;
+				box-shadow: 
+					0 25px 80px rgba(0, 0, 0, 0.6),
+					0 0 0 2px rgba(244, 162, 97, 0.3),
+					inset 0 0 0 2px rgba(255, 255, 255, 0.15);
+				transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				position: relative;
+				overflow: hidden;
+				border: 1px solid rgba(244, 162, 97, 0.2);
+			}
+			
+			.feature-image::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+				transition: left 0.8s;
+				z-index: 1;
+			}
+			
+			.feature-image:hover::before {
+				left: 100%;
+			}
+			
+			.feature-image:hover {
+				transform: scale(1.08) translateY(-15px) rotate(1deg);
+				box-shadow: 
+					0 35px 100px rgba(0, 0, 0, 0.7),
+					0 0 0 3px rgba(244, 162, 97, 0.5),
+					0 0 80px rgba(244, 162, 97, 0.4);
+			}
+			
+			/* Cards de Testimonios Premium */
+			.testimonial-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 3rem;
+				margin: 4rem 0;
+			}
+			
+			.testimonial-card {
+				background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+				backdrop-filter: blur(15px) saturate(180%);
+				padding: 2.5rem;
+				border-radius: 25px;
+				text-align: left;
+				border: 2px solid rgba(244, 162, 97, 0.25);
+				box-shadow: 
+					0 10px 40px rgba(0, 0, 0, 0.4),
+					inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+				transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.testimonial-card::before {
+				content: '"';
+				position: absolute;
+				top: 15px;
+				left: 20px;
+				font-size: 5rem;
+				color: rgba(244, 162, 97, 0.25);
+				font-family: Georgia, serif;
+				line-height: 1;
+				z-index: 0;
+			}
+			
+			.testimonial-card::after {
+				content: '';
+				position: absolute;
+				top: -50%;
+				right: -50%;
+				width: 200%;
+				height: 200%;
+				background: radial-gradient(circle, rgba(244, 162, 97, 0.1) 0%, transparent 70%);
+				opacity: 0;
+				transition: opacity 0.6s;
+			}
+			
+			.testimonial-card:hover::after {
+				opacity: 1;
+			}
+			
+			.testimonial-card:hover {
+				transform: translateY(-15px) scale(1.03);
+				background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.10));
+				border-color: rgba(244, 162, 97, 0.5);
+				box-shadow: 
+					0 25px 70px rgba(0, 0, 0, 0.5),
+					0 0 60px rgba(244, 162, 97, 0.3),
+					inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+			}
+			
+			.testimonial-card h6,
+			.testimonial-card p {
+				position: relative;
+				z-index: 1;
+			}
+			
+			/* Footer Elegante */
+			.footer {
+				background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.95));
+				backdrop-filter: blur(25px);
+				border-top: 3px solid transparent;
+				border-image: linear-gradient(90deg, transparent, var(--primary-gold), var(--purple-accent), var(--primary-gold), transparent) 1;
+				padding: 4rem 0;
+				text-align: center;
+				color: var(--text-light);
+				margin-top: 6rem;
+				box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.6);
+			}
+			
+			/* Efectos Adicionales */
+			ul {
+				list-style: none;
+				padding: 0;
+			}
+			
+			ul li {
+				padding: 1rem 0;
+				padding-left: 2.5rem;
+				position: relative;
+				font-size: 1.15rem;
+			}
+			
+			ul li::before {
+				content: '✨';
+				position: absolute;
+				left: 0;
+				top: 1rem;
+				color: var(--primary-gold);
+				font-size: 1.2rem;
+				animation: twinkle 2s infinite;
+			}
+			
+			@keyframes twinkle {
+				0%, 100% { opacity: 1; }
+				50% { opacity: 0.5; }
+			}
+			
+			strong {
+				color: var(--primary-gold);
+				font-weight: 700;
+				text-shadow: 0 0 10px rgba(244, 162, 97, 0.3);
+			}
+			
+			/* Responsive Premium */
+			@media (max-width: 768px) {
+				.container {
+					padding: 0 1.5rem;
+				}
+				
+				h1 { font-size: 2.5rem; }
+				h2 { font-size: 2rem; }
+				h3 { font-size: 1.6rem; }
+				
+				.section {
+					padding: 4rem 0;
+				}
+				
+				.call-button {
+					padding: 1.2rem 2.5rem;
+					font-size: 1.1rem;
+				}
+				
+				.floating-call {
+					width: 65px;
+					height: 65px;
+					font-size: 1.8rem;
+					bottom: 25px;
+					right: 25px;
+				}
+				
+				.testimonial-grid {
+					grid-template-columns: 1fr;
+					gap: 2rem;
+				}
+				
+				.feature-image {
+					max-width: 100%;
+				}
 			}
 		</style>
 	</head>
-	<body class="min-h-screen text-gray-100 overflow-x-hidden">
-		<!-- Header Mobile-First -->
-		<header class="fixed top-0 left-0 right-0 z-50 glass-dark shadow-lg shadow-blue-900/20">
-			<div class="container mx-auto px-4 py-4">
-				<div class="flex items-center justify-between">
-					<!-- Logo/Brand -->
-					<div class="flex items-center space-x-3">
-						<div class="w-10 h-10 rounded-full bg-gradient-to-br from-celestial to-blue-600 flex items-center justify-center animate-pulse-slow">
-							<span class="text-2xl">✨</span>
-						</div>
-						<div class="hidden sm:block">
-							<h1 class="text-lg font-elegant font-bold gradient-text">Amores Ligados</h1>
-							<p class="text-xs text-blue-300">Consulta GRATIS</p>
-						</div>
-					</div>
-					
-					<!-- CTA Button Header -->
-					<a href="tel:+12138143588" class="glass px-4 py-2 rounded-full text-sm font-semibold text-blue-100 hover:bg-blue-600/30 transition-all duration-300 shine-effect flex items-center space-x-2 shadow-lg shadow-blue-500/20">
-						<span>📞</span>
-						<span class="hidden sm:inline">Llamar</span>
-					</a>
-				</div>
-				
-				<!-- Promo Banner -->
-				<div class="mt-3 glass rounded-lg px-4 py-2 text-center">
-					<p class="text-xs sm:text-sm font-medium text-blue-200">
-						<span class="inline-block animate-shimmer">🎁</span>
-						<span class="font-bold text-moon-glow"> OFERTA:</span> Primera Consulta Totalmente GRATIS
-					</p>
-				</div>
-			</div>
+	<body>
+		<header class="header">
+			<nav class="nav container">
+				<a href="#inicio">HOME</a>
+			</nav>
 		</header>
-		
-		<!-- Espaciado para header fijo -->
-		<div class="h-32"></div>
 		
 		<main>
 			<slot />
 		</main>
 		
-		<!-- Botón Flotante Mejorado -->
-		<a href="tel:+12138143588" 
-		   class="fixed bottom-6 right-6 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full shadow-2xl shadow-blue-500/50 flex items-center justify-center text-3xl sm:text-4xl z-50 animate-float hover:scale-110 transition-transform duration-300 border-2 border-blue-400/30"
-		   aria-label="Llamar Ahora">
-			<span class="animate-pulse-slow">📞</span>
+		<a href="tel:+12138143588" class="floating-call" title="Llamar Ahora" aria-label="Llamar Ahora">
+			📞
 		</a>
 		
-		<!-- Footer Moderno -->
-		<footer class="mt-20 glass-dark border-t border-blue-500/20">
-			<div class="container mx-auto px-4 py-8">
-				<div class="text-center space-y-4">
-					<div class="flex justify-center items-center space-x-3 mb-4">
-						<div class="w-8 h-8 rounded-full bg-gradient-to-br from-celestial to-blue-600 flex items-center justify-center">
-							<span class="text-xl">✨</span>
-						</div>
-						<span class="font-elegant font-bold text-xl gradient-text">Amores Ligados</span>
-					</div>
-					
-					<p class="text-sm text-blue-200">&copy; 2024 Amores Ligados | Todos los derechos reservados</p>
-					<p class="text-xs text-blue-300">Más de 40 años de experiencia en ciencias ocultas</p>
-					
-					<button 
-						onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
-						class="mt-6 px-6 py-3 glass rounded-full text-sm font-semibold hover:bg-blue-600/30 transition-all duration-300 shine-effect inline-flex items-center space-x-2">
-						<span>↑</span>
-						<span>Volver al inicio</span>
-					</button>
-				</div>
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; 2024 Amores Ligados | Powered by MiniMax Agent</p>
+				<button onclick="scrollToTop()" class="call-button" style="margin-top: 2rem;">
+					↑ Scroll al inicio
+				</button>
 			</div>
 		</footer>
 		
-		<!-- Script para animaciones al scroll -->
 		<script>
-			// Intersection Observer para animaciones al hacer scroll
-			const observerOptions = {
-				threshold: 0.1,
-				rootMargin: '0px 0px -100px 0px'
-			};
-			
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('animate-slide-up');
-					}
-				});
-			}, observerOptions);
-			
-			// Observar elementos con clase 'fade-in'
-			document.addEventListener('DOMContentLoaded', () => {
-				const elements = document.querySelectorAll('.fade-in');
-				elements.forEach(el => observer.observe(el));
-			});
+			function scrollToTop() {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			}
 		</script>
 	</body>
 </html>
