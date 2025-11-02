@@ -3,85 +3,340 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Amores Ligados - Consultas Espirituales">
-
-  <!-- HERO SECTION -->
-  <section id="inicio" class="section">
-    <div class="container">
-      <h1>Amarres de Amor</h1>
-      <h2>Consulta GRATIS</h2>
-      <a href="tel:+12138143588" class="call-button">
-        LLAME YA - Consulta GRATIS
-      </a>
-      <h3>RECUPERE EL AMOR DE SU PAREJA HOY MISMO</h3>
-      <p>¿Siente que su pareja se ha alejado? ¿Humillación, rechazo, desprecio? No se rinda. Con más de 40 años de experiencia, le ayudamos a recuperar a su ser amado.</p>
-    </div>
-  </section>
-
-  <!-- BIENVENIDA -->
-  <section class="section section-dark">
-    <div class="container">
-      <h2>Portal del Amor</h2>
-      <p>En <strong>Amores Ligados</strong>, entendemos el dolor de perder a quien amas. Ofrecemos soluciones efectivas y confidenciales para recuperar a tu ser amado, utilizando técnicas de alto poder.</p>
-      <img src="/imgs/vela_mistica.png" alt="La Llama de una Vela" class="feature-image" />
-    </div>
-  </section>
-  
-  <!-- TESTIMONIOS -->
-  <section class="section">
-    <div class="container">
-      <h2>Resultados Efectivos</h2>
-      <p>Nuestros trabajos han dejado felices a parejas que han regresado. Aumentamos las feromonas para reavivar la pasión.</p>
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <h6>Desde Los Ángeles, CA</h6>
-          <p>"¡Increíble! Mi pareja regresó después de 6 meses. Los amarres funcionan de verdad. Muchas gracias."</p>
-        </div>
-        <div class="testimonial-card">
-          <h6>Desde Miami, FL</h6>
-          <p>"Pensé que había perdido todo, pero con su ayuda recuperé el amor de mi vida. Eternamente agradecida."</p>
-        </div>
-        <div class="testimonial-card">
-          <h6>Desde Nueva York, NY</h6>
-          <p>"Los resultados llegaron antes de lo esperado. Mi matrimonio se salvó gracias a sus servicios."</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- SERVICIOS -->
-  <section class="section section-dark">
-    <div class="container">
-      <h2>Nuestros Rituales</h2>
-      <img src="/imgs/velas_rituales.png" alt="La Magia de las Velas" class="feature-image" />
-      <h5>La Magia de las Velas</h5>
-      <p>Utilizamos velas consagradas para invocar espíritus de alta luz que iluminan y protegen durante nuestros rituales de amarres de amor.</p>
-      <img src="/imgs/altar_espiritual.png" alt="Altar Consagrado" class="feature-image" />
-      <h5>Altares Consagrados</h5>
-      <p>Nuestros altares están consagrados con los nombres de las parejas para unirlas, asegurando el regreso de la persona amada.</p>
-    </div>
-  </section>
-  
-  <!-- TIPOS DE AMARRES -->
-  <section class="section">
-    <div class="container">
-      <h2>Tipos de Amarres</h2>
-      <ul style="text-align: left; max-width: 600px; margin: 2rem auto;">
-        <li><strong>Amarres Momentáneos:</strong> Para situaciones que requieren resultados inmediatos.</li>
-        <li><strong>Amarres Eternos:</strong> Para recuperar a la pareja de forma permanente y genuina.</li>
-        <li><strong>Amarres Protectivos:</strong> Para proteger la relación de influencias externas.</li>
-      </ul>
-    </div>
-  </section>
-  
-  <!-- CTA FINAL -->
-  <section class="section section-dark">
-    <div class="container">
-      <h2>Consulta GRATIS</h2>
-      <p>Hable con nuestros expertos y descubra la mejor solución para su situación. Desde cualquier lugar de Estados Unidos.</p>
-      <a href="tel:+12134389807" class="call-button">
-        LLAMAR AHORA: +1 (213) 438-9807
-      </a>
-    </div>
-  </section>
-
+	<!-- Hero Section -->
+	<section class="relative px-4 sm:px-6 py-12 sm:py-20">
+		<div class="container mx-auto max-w-5xl">
+			<div class="text-center space-y-8">
+				<!-- Título Principal -->
+				<h1 class="font-['Playfair_Display'] text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+					<span class="gradient-text">Amarres de Amor</span>
+				</h1>
+				
+				<!-- Badge Consulta Gratis -->
+				<div class="inline-block glass-card px-8 py-4 rounded-2xl shadow-2xl">
+					<p class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3 justify-center">
+						<span class="text-3xl">✨</span>
+						Consulta GRATIS
+						<span class="text-3xl">✨</span>
+					</p>
+				</div>
+				
+				<!-- Subtítulo -->
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-100 px-4 leading-relaxed">
+					RECUPERE EL AMOR DE SU PAREJA<br class="hidden sm:block" /> HOY MISMO
+				</h2>
+				
+				<!-- Descripción -->
+				<div class="space-y-5 text-lg sm:text-xl text-blue-50 max-w-3xl mx-auto leading-relaxed">
+					<p>
+						¿Siente que su pareja se ha alejado de usted? ¿Está perdiendo el amor que tanto le costó ganar?
+					</p>
+					<p class="font-semibold text-blue-200">
+						¡No se rinda! Con más de <span class="text-blue-300 font-bold">40 años de experiencia</span> en ciencias ocultas y esotéricas, le ayudamos a recuperar a su ser amado a través de técnicas de alto poder.
+					</p>
+				</div>
+				
+				<!-- CTA Principal -->
+				<div class="pt-8">
+					<a href="tel:+12138143588" 
+					   class="inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-10 py-5 rounded-full text-xl sm:text-2xl font-bold text-white shadow-2xl shadow-blue-500/60 hover:scale-105 hover:shadow-blue-400/80 transition-all duration-300 shine-hover">
+						📞 LLAME YA - Consulta GRATIS
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Sección Consulta Info -->
+	<section class="py-16 sm:py-20 glass-dark">
+		<div class="container mx-auto max-w-4xl px-4 sm:px-6">
+			<div class="text-center space-y-6">
+				<h3 class="font-['Cinzel'] text-3xl sm:text-4xl font-bold text-blue-300">CONSULTA GRATUITA</h3>
+				<p class="text-lg sm:text-xl text-blue-50 leading-relaxed max-w-2xl mx-auto">
+					En nuestras consultas, analizamos su situación específica y le recomendamos el tipo de amarre más efectivo para su caso. Nuestro enfoque es completamente <span class="font-bold text-blue-300">confidencial y respetuoso</span>.
+				</p>
+				<a href="tel:+12138143588" 
+				   class="inline-block glass-card px-8 py-4 rounded-full text-lg sm:text-xl font-semibold text-white hover:bg-blue-600/40 transition-all duration-300 shine-hover border-2 border-blue-400/40 shadow-lg">
+					📞 Llamar: +1 (213) 814-3588
+				</a>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Portal del Amor -->
+	<section class="py-16 sm:py-24 px-4 sm:px-6">
+		<div class="container mx-auto max-w-5xl">
+			<div class="text-center space-y-8">
+				<p class="text-sm sm:text-base font-bold text-blue-400 uppercase tracking-widest">Bienvenido al</p>
+				<h2 class="font-['Playfair_Display'] text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text">Portal del Amor</h2>
+				
+				<p class="text-lg sm:text-xl text-blue-50 leading-relaxed max-w-3xl mx-auto">
+					En <strong class="text-blue-300">Amores Ligados</strong>, entendemos el dolor de perder a quien amas. Con nuestra vasta experiencia de más de 40 años en ciencias ocultas y esotéricas, ofrecemos soluciones efectivas y confidenciales para recuperar a tu ser amado.
+				</p>
+				
+				<!-- Imagen -->
+				<div class="my-12 sm:my-16">
+					<div class="relative inline-block group max-w-xl mx-auto">
+						<div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
+						<img src="/imgs/vela_mistica.png" 
+						     alt="La Llama de una Vela" 
+						     class="relative rounded-3xl shadow-2xl w-full border-4 border-blue-400/40 group-hover:scale-105 transition-transform duration-500" />
+					</div>
+				</div>
+				
+				<!-- Info Cards -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
+					<div class="glass-card p-8 rounded-3xl text-left shadow-xl hover:bg-blue-600/30 transition-all duration-300">
+						<h4 class="font-['Cinzel'] text-2xl sm:text-3xl font-bold text-blue-300 mb-4">¿Qué Podemos Hacer Por Ti?</h4>
+						<p class="text-base sm:text-lg text-blue-50 leading-relaxed">
+							Utilizamos técnicas de alto poder en ciencias ocultas y esotéricas para ayudar a las personas a recuperar, dominar y atraer a su pareja. Nuestros métodos han dejado felices a parejas que han regresado, sin importar el tiempo o la distancia.
+						</p>
+					</div>
+					
+					<div class="glass-card p-8 rounded-3xl text-left shadow-xl hover:bg-blue-600/30 transition-all duration-300">
+						<h4 class="font-['Cinzel'] text-2xl sm:text-3xl font-bold text-blue-300 mb-4">Nuestra Promesa</h4>
+						<p class="text-base sm:text-lg text-blue-50 leading-relaxed">
+							Garantizamos total confidencialidad y respeto por sus deseos y necesidades. Con nuestra vasta experiencia, le acompañamos en este proceso hasta lograr sus objetivos.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Urgencia -->
+	<section class="py-16 sm:py-20 glass-dark">
+		<div class="container mx-auto max-w-4xl px-4 sm:px-6">
+			<div class="text-center space-y-6 glass-card p-8 sm:p-12 rounded-3xl shadow-2xl">
+				<div class="text-5xl sm:text-6xl mb-4">⏰</div>
+				<h3 class="font-['Cinzel'] text-3xl sm:text-4xl font-bold text-blue-300">
+					NO SE RINDA, ACTÚE AHORA
+				</h3>
+				<p class="text-lg sm:text-xl text-blue-50 leading-relaxed">
+					El tiempo es crucial en estos casos. No espere más para actuar. Cada día que pasa, la situación puede empeorar. Nuestros amarres de amor pueden ayudarle a <span class="font-bold text-blue-300">recuperar a su pareja en cuestión de días</span>.
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Testimonios -->
+	<section class="py-16 sm:py-24 px-4 sm:px-6">
+		<div class="container mx-auto max-w-6xl">
+			<div class="text-center mb-12">
+				<h2 class="font-['Playfair_Display'] text-4xl sm:text-5xl font-bold gradient-text mb-6">Resultados Efectivos</h2>
+				<p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto">
+					Nuestros trabajos han dejado felices a parejas que han regresado.
+				</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+				<div class="glass-card p-6 sm:p-8 rounded-2xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl">
+					<div class="flex items-start gap-3 mb-4">
+						<span class="text-4xl">💬</span>
+						<div>
+							<h5 class="font-bold text-lg text-blue-300">Testimonio WhatsApp</h5>
+						</div>
+					</div>
+					<p class="text-blue-50 italic leading-relaxed text-base mb-4">
+						"¡Increíble! Mi pareja regresó después de 6 meses. Los amarres funcionan de verdad. Muchas gracias."
+					</p>
+					<div class="flex text-yellow-400 text-xl">
+						⭐⭐⭐⭐⭐
+					</div>
+				</div>
+				
+				<div class="glass-card p-6 sm:p-8 rounded-2xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl">
+					<div class="flex items-start gap-3 mb-4">
+						<span class="text-4xl">💬</span>
+						<div>
+							<h5 class="font-bold text-lg text-blue-300">Testimonio WhatsApp</h5>
+						</div>
+					</div>
+					<p class="text-blue-50 italic leading-relaxed text-base mb-4">
+						"Pensé que había perdido todo, pero con su ayuda Recuperé el amor de mi vida. Eternamente agradecida."
+					</p>
+					<div class="flex text-yellow-400 text-xl">
+						⭐⭐⭐⭐⭐
+					</div>
+				</div>
+				
+				<div class="glass-card p-6 sm:p-8 rounded-2xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl md:col-span-2 lg:col-span-1">
+					<div class="flex items-start gap-3 mb-4">
+						<span class="text-4xl">💬</span>
+						<div>
+							<h5 class="font-bold text-lg text-blue-300">Testimonio WhatsApp</h5>
+						</div>
+					</div>
+					<p class="text-blue-50 italic leading-relaxed text-base mb-4">
+						"Los resultados llegaron antes de lo esperado. Mi matrimonio se salvó gracias a sus servicios."
+					</p>
+					<div class="flex text-yellow-400 text-xl">
+						⭐⭐⭐⭐⭐
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Servicios: Velas, Altares, Hechizos -->
+	<section class="py-16 sm:py-24 glass-dark">
+		<div class="container mx-auto max-w-6xl px-4 sm:px-6">
+			<!-- Velas -->
+			<div class="text-center mb-16">
+				<h3 class="font-['Cinzel'] text-3xl sm:text-4xl font-bold text-blue-300 mb-6">🕯️ LA LLAMA DE UNA VELA</h3>
+				<p class="text-lg sm:text-xl text-blue-50 leading-relaxed max-w-3xl mx-auto mb-12">
+					El fuego de una vela representa la iluminación de las peticiones para que los amarres sean alumbrados por fuerzas celestiales.
+				</p>
+				
+				<div class="mb-12">
+					<div class="relative inline-block group max-w-2xl mx-auto">
+						<div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
+						<img src="/imgs/velas_rituales.png" 
+						     alt="Velas Rituales" 
+						     class="relative rounded-3xl shadow-2xl w-full border-4 border-blue-400/40 group-hover:scale-105 transition-transform duration-500" />
+					</div>
+				</div>
+				
+				<p class="text-base sm:text-lg text-blue-100 leading-relaxed max-w-2xl mx-auto">
+					Utilizamos velas consagradas para invocar espíritus de alta luz que iluminan y protegen de la maldad durante nuestros rituales de amarres de amor.
+				</p>
+			</div>
+			
+			<!-- Altares y Hechizos Grid -->
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+				<!-- Altares -->
+				<div class="glass-card p-8 rounded-3xl shadow-xl hover:bg-blue-600/30 transition-all duration-300">
+					<h3 class="font-['Cinzel'] text-2xl sm:text-3xl font-bold text-blue-300 mb-6">🔮 ALTARES</h3>
+					<p class="text-base sm:text-lg text-blue-50 leading-relaxed mb-8">
+						Nuestros altares están consagrados con los nombres de las parejas para unirlas. Utilizamos técnicas, poderes y secretos de alto poder, junto con materiales de la más alta calidad.
+					</p>
+					<div class="relative group">
+						<div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+						<img src="/imgs/altar_espiritual.png" 
+						     alt="Altar Consagrado" 
+						     class="relative rounded-2xl shadow-xl w-full border-2 border-blue-400/40 group-hover:scale-105 transition-transform duration-300" />
+					</div>
+				</div>
+				
+				<!-- Hechizos -->
+				<div class="glass-card p-8 rounded-3xl shadow-xl hover:bg-blue-600/30 transition-all duration-300">
+					<h3 class="font-['Cinzel'] text-2xl sm:text-3xl font-bold text-blue-300 mb-6">✨ HECHIZOS DE AMOR</h3>
+					<p class="text-base sm:text-lg text-blue-50 leading-relaxed mb-8">
+						Realizamos hechizos de amor en beneficio de la persona para reunir a la pareja y alejar a quienes se interpusieron. Ceremonias realizadas en arameo con técnicas ancestrales.
+					</p>
+					<div class="relative group">
+						<div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+						<img src="/imgs/hechizos_amor.png" 
+						     alt="Hechizos de Amor" 
+						     class="relative rounded-2xl shadow-xl w-full border-2 border-blue-400/40 group-hover:scale-105 transition-transform duration-300" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Tipos de Amarres -->
+	<section class="py-16 sm:py-24 px-4 sm:px-6">
+		<div class="container mx-auto max-w-6xl">
+			<div class="text-center mb-12">
+				<h3 class="font-['Cinzel'] text-4xl sm:text-5xl font-bold gradient-text mb-6">💫 DOMINIOS DE AMOR</h3>
+				<p class="text-lg sm:text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
+					Los dominios de amor se realizan para que la pareja no se aferre a nadie más y haga lo que la persona desea, enfocando su amor solo en el solicitante.
+				</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+				<div class="glass-card p-8 rounded-3xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl text-center">
+					<div class="text-5xl mb-4">⚡</div>
+					<h5 class="font-bold text-xl sm:text-2xl text-blue-300 mb-3">Amarres Momentáneos</h5>
+					<p class="text-base text-blue-100 leading-relaxed">Para situaciones que requieren resultados inmediatos</p>
+				</div>
+				
+				<div class="glass-card p-8 rounded-3xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl text-center">
+					<div class="text-5xl mb-4">💝</div>
+					<h5 class="font-bold text-xl sm:text-2xl text-blue-300 mb-3">Amarres Eternos</h5>
+					<p class="text-base text-blue-100 leading-relaxed">Para recuperar a la pareja de forma permanente y genuina</p>
+				</div>
+				
+				<div class="glass-card p-8 rounded-3xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl text-center">
+					<div class="text-5xl mb-4">🛡️</div>
+					<h5 class="font-bold text-xl sm:text-2xl text-blue-300 mb-3">Amarres Protectivos</h5>
+					<p class="text-base text-blue-100 leading-relaxed">Para proteger la relación de influencias externas</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Más Testimonios -->
+	<section class="py-16 sm:py-24 glass-dark">
+		<div class="container mx-auto max-w-6xl px-4 sm:px-6">
+			<div class="text-center mb-12">
+				<h2 class="font-['Playfair_Display'] text-4xl sm:text-5xl font-bold gradient-text mb-6">TESTIMONIOS VÍA WHATSAPP</h2>
+				<p class="text-lg sm:text-xl text-blue-100">
+					Conversaciones reales con nuestros clientes satisfechos
+				</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+				<div class="glass-card p-6 sm:p-8 rounded-2xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl">
+					<h5 class="font-bold text-xl text-blue-300 mb-3">María - Los Ángeles, CA</h5>
+					<p class="text-blue-50 italic leading-relaxed mb-4">
+						"Después de 8 años de matrimonio, mi esposo se fue con otra mujer. Gracias a sus amarres, regresó a casa en 2 semanas. Mi matrimonio está más fuerte que nunca."
+					</p>
+					<div class="flex text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
+				</div>
+				
+				<div class="glass-card p-6 sm:p-8 rounded-2xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl">
+					<h5 class="font-bold text-xl text-blue-300 mb-3">Carlos - Miami, FL</h5>
+					<p class="text-blue-50 italic leading-relaxed mb-4">
+						"Mi novia me dejó por otro. Yo estaba desesperado. Sus técnicas funcionaron perfectamente. Ahora estamos comprometidos y planeando nuestra boda."
+					</p>
+					<div class="flex text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
+				</div>
+				
+				<div class="glass-card p-6 sm:p-8 rounded-2xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl">
+					<h5 class="font-bold text-xl text-blue-300 mb-3">Ana - Nueva York, NY</h5>
+					<p class="text-blue-50 italic leading-relaxed mb-4">
+						"Pensé que nunca recuperaría a mi ex. Sus servicios me devolvieron la esperanza. Hoy llevamos 3 años juntos y somos más felices que antes."
+					</p>
+					<div class="flex text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
+				</div>
+				
+				<div class="glass-card p-6 sm:p-8 rounded-2xl hover:bg-blue-600/30 transition-all duration-300 shine-hover shadow-xl">
+					<h5 class="font-bold text-xl text-blue-300 mb-3">Roberto - Chicago, IL</h5>
+					<p class="text-blue-50 italic leading-relaxed mb-4">
+						"La mujer de mis sueños me rechazó múltiples veces. Los amarres cambiaron todo. Ahora estamos casados y esperamos nuestro primer hijo."
+					</p>
+					<div class="flex text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- CTA Final -->
+	<section class="py-16 sm:py-24 px-4 sm:px-6">
+		<div class="container mx-auto max-w-4xl">
+			<div class="glass-card p-10 sm:p-16 rounded-3xl text-center shadow-2xl">
+				<h2 class="font-['Playfair_Display'] text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text mb-8">CONSULTA GRATIS</h2>
+				<p class="text-lg sm:text-xl text-blue-50 leading-relaxed mb-6">
+					No tome esta decisión solo. Hable con nuestros expertos y descubra cuál es la mejor solución para su situación específica.
+				</p>
+				<p class="text-base sm:text-lg text-blue-100 font-semibold mb-10">
+					📍 Desde cualquier lugar de Estados Unidos
+				</p>
+				
+				<div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+					<a href="tel:+12138143588" 
+					   class="w-full sm:w-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-10 py-5 rounded-full text-xl font-bold text-white shadow-2xl shadow-blue-500/60 hover:scale-105 hover:shadow-blue-400/80 transition-all duration-300 shine-hover">
+					   📞 +1 (213) 814-3588
+					</a>
+					
+					<a href="tel:+12134389807" 
+					   class="w-full sm:w-auto glass-card px-10 py-5 rounded-full text-xl font-bold text-white hover:bg-blue-600/40 transition-all duration-300 shine-hover border-2 border-blue-400/40 shadow-lg">
+					   📞 +1 (213) 438-9807
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
